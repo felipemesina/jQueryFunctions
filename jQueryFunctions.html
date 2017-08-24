@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#top_button").click(function(){
+                   $("#boo").text("BOO!"), $("#boo").css("font-size", "100px"), $("#boo").fadeOut(3000)
+                });
+
+                $("#abrakadabra").click(function(){
+                    $("#abrakadabra").hide(), $("#abrakadabra").show(2000) 
+                });
+
+                $("#go_away").click(function(){ 
+                    $("#poof").toggle()
+                });
+            
+                
+                $("#slide_toggle").click(function(){   
+                    $("#slide_toggle_para").slideToggle()
+                });
+                
+                $("#slide_up").click(function(){
+                    $("#slide_up_para").slideUp(), $("#slide_up_para").slideDown()
+                });
+                
+                $("#fade_in").click(function(){
+                    $("#fade_in_para").hide(), $("#fade_in_para").fadeIn(5000)  
+                });
+
+                $("#myName_box").addClass("fontcolor");
+
+                $("#html_button").click(function(){
+                  alert( $("#bold_para").html());
+                });
+
+                $("#blackcat").click(function(){
+                    alert ($("#blackcat").attr("alt"));
+                });
+
+                $("#append_button").click(function(){
+                    $("h2").append("awesome!");
+                });
+
+                $("#before_button").click(function(){
+                    $("h2").before("I think...");
+                });
+
+                $( ".inner" ).after( "<p>AFTER</p>" );
+
+                $("#value_button").click(function(){
+                  alert ("The value is--> " + $("#value_test").val());
+                })
+                
+                $("#btn1").click(function(){
+                $("div").data("greeting", "Hello World");
+                });
+                
+                $("#btn2").click(function(){
+                alert($("div").data("greeting"));
+                 });
+            });
+        </script>
+
+    </head>
+    <body>
+        <button id="top_button">Do You Dare?...</button>
+        <p id="boo"></p>
+
+        <h1 id="abrakadabra">Abra Kadabra!</h1>
+
+        <button id="go_away">Toggle</button>
+        <p id="poof">POOF!</p>
+
+        <button id="slide_toggle">Ssssslide...</button>
+        <p id="slide_toggle_para">...Toggle.</p>
+
+        <button id="slide_up">Slide Up</button>
+        <p id="slide_up_para">up up...down down</p>
+
+        <button id="fade_in">Fade In</button>
+        <p id="fade_in_para">Fading in...</p>
+
+        <div id="myName_box">
+            <p>My name is Felipe.</p>
+            <p>My last name is Mesina.</p>
+        </div>
+
+        <button id="html_button">html</button>
+        <p id="bold_para">This <em>Paragraph</em> is <b> BOLD.</b></p>
+
+        <img id="blackcat" src="blackcat.png" alt="a black cat">
+
+        <button id="before_button">Before Button</button>
+        <button id="append_button">Append Text</button>
+        <h2>Coding is...</h2>
+
+        <div class="container">
+            <h1 id="sent">title</h1>
+                <div class="inner">Hello</div>
+                <div class="inner">Goodbye</div>
+        </div>
+
+        <button id="value_button">Show me the value</button>
+        <p>Name: <input type="text" id="value_test" value="Felipe Mesina"></p>
+
+        <button id="btn1">Drop data into box</button><br>
+        <button id="btn2">Retrieve my data</button>
+        
+        <div></div>
+
+    
+    </body>
+</html>
